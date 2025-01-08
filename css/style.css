@@ -1,0 +1,129 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #a9382d !important;
+}
+
+/* Conteneur principal */
+.fullscreen-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a9382d;
+}
+
+/* Conteneur de la carte */
+.map-container {
+    position: relative;
+    /* Utile pour positionner des éléments enfants absolus */
+    width: 90%;
+    max-width: 800px; /* Limite la taille maximale sur les grands écrans */
+    aspect-ratio: 16/9; /* Maintient un ratio fixe (ajustez selon votre carte) */
+}
+
+/* Image principale (carte) */
+.svg-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Points */
+.maps1, .maps2, .maps3 {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    animation: bounce 2s infinite ease-in-out;
+    /* Animation pour attirer l'attention */
+}
+
+/* Positions spécifiques des points */
+.maps1 {
+    top: 50%; /* 50% de la hauteur de la carte */
+    left: 80%; /* 80% de la largeur de la carte */
+    transform: translate(-50%, -50%);
+}
+
+.maps2 {
+    top: 80%; /* 80% de la hauteur */
+    left: 55%; /* 55% de la largeur */
+    transform: translate(-50%, -50%);
+}
+
+.maps3 {
+    top: 30%; /* 30% de la hauteur */
+    left: 65%; /* 65% de la largeur */
+    transform: translate(-50%, -50%);
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -60%) scale(1.2);
+    }
+}
+
+/* Style pour le titre */
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 10%; /* Garde une marge sur les côtés */
+    font-size: 2rem; /* Taille de base */
+    line-height: 1.5; /* Espacement entre les lignes */
+}
+
+/* Style pour le texte */
+h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem; /* Taille de base */
+    text-align: center;
+    margin: 10px 10%; /* Marge en haut/bas et sur les côtés */
+    line-height: 1.6; /* Espacement pour une meilleure lisibilité */
+}
+
+/* Responsivité des titres et textes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Taille réduite pour les petits écrans */
+    }
+    h2 {
+        font-size: 1.1rem; /* Taille réduite pour les petits écrans */
+    }
+}
+
+/* Flèches */
+.fleche {
+    display: flex;
+    justify-content: center; /* Centre les flèches */
+    align-items: center; /* Aligne les flèches verticalement si nécessaire */
+    gap: 10px; /* Contrôle l'espace exact entre les flèches */
+    margin: 0 auto; /* Centrage du conteneur si nécessaire */
+    position: fixed;
+    bottom: 0;
+}
+
+.fle {
+    max-width: 25%; /* Réduit la taille proportionnellement à la largeur de son conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    margin-left: 33%;
+}
+
+.attention {
+    display: flex;
+    justify-content: center;
+}
+
+.att {
+    max-width: 27.5%;
+    height: auto;
+}
+
