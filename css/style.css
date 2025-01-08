@@ -90,6 +90,15 @@ h2 {
     line-height: 1.6; /* Espacement pour une meilleure lisibilité */
 }
 
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem; /* Taille de base */
+    text-align: center;
+    margin: 10px 10%; /* Marge en haut/bas et sur les côtés */
+    line-height: 1.2; /* Espacement pour une meilleure lisibilité */
+}
+
 /* Responsivité des titres et textes */
 @media (max-width: 768px) {
     h1 {
@@ -97,6 +106,9 @@ h2 {
     }
     h2 {
         font-size: 1rem; /* Taille réduite pour les petits écrans */
+    }
+    h3 {
+        font-size: 0.9rem; /* Taille réduite pour les petits écrans */
     }
 }
 
