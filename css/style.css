@@ -99,6 +99,10 @@ h3{
     line-height: 1.2; /* Espacement pour une meilleure lisibilité */
 }
 
+.bravo{
+    position: absolute;
+}
+
 /* Responsivité des titres et textes */
 @media (max-width: 768px) {
     h1 {
